@@ -20,21 +20,24 @@ Alternating Bit Patterns - Writes 0xAAAA and 0x5555 and reads each back to verif
 
 Write/Read All 32 locations - Fills all 32 FIFO entries using a for loop and verifies full = 1, then drains all entries and verifies empty  = 1.
 
-Status Flags- Verifies empty, almost_empty, almost_full and full asserts at the correct fill levels (0,2,31,32 entries).
+Status Flags - Verifies empty, almost_empty, almost_full and full asserts at the correct fill levels (0,2,31,32 entries).
 
 Write Enable Blocked - Confirms data_count does not change when write_enable = 0.
 
 Read Enable Blocked - Confirms data_count does not change when read_enable =0.
 
+### Simulation Screenshot showing all Test Cases:
+![BRAM Simulation](Screenshots/ECE520Lab_BRAM_Simu.png)
+
+### RTL Screenshot of FIFO
+![RTL](Screenshots/ECE520Lab_BRAM_RTL.png)
 
 
 # Known Issues and Limitations
-
+No Known Issues.
 # References
-Used for always block for the clock in the Testbench.
-
+The link was used to understand the 'always' block sytnax for clock generation in the testbench: 
 https://chipverify.com/verilog/verilog-always-block
 
-Used for the finish function in the testbench.
-
+The link was used to understand the 'finish' system task for ending simulation in the testbench:
 https://chipverify.com/verilog/verilog-stop-finish
