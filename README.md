@@ -10,6 +10,23 @@ The FIFO is implemented as a single-clock synchronous design (sc_fifo.v) with co
 The internal memory is inferred as BRAM by Vivado through a synchronous 2D register array. Status flags are driven combinationally from a running count register.
 
 # Verification and Testing
+### Test Cases:
+
+Reset -  Asserts SRST for two clock cycles and verifies empty = 1 and data_count  = 0 after reset.
+
+Write/Read All 1's and 0's - Writes 0xFFFF then 0x0000 and reads each back to verify 'data_out' matches.
+
+Alternating Bit Patterns - Writes 0xAAAA and 0x5555 and reads each back to verify no bit corruption.
+
+Write/Read All 32 locations - Fills all 32 FIFO entries using a for loop and verifies full = 1, then drains all entries and verifies empty  = 1.
+
+Status Flags- Verifies empty, almost_empty, almost_full and full asserts at the correct fill levels (0,2,31,32 entries).
+
+Write Enable Blocked - Confirms data_count does not change when write_enable = 0.
+
+Read Enable Blocked - Confirms data_count does not change when read_enable =0.
+
+
 
 # Known Issues and Limitations
 
