@@ -46,8 +46,8 @@ module sc_fifo #
     output full,
     output empty
     );
-    // this is the BRAM
-    reg [WIDTH-1:0] mem [0:DEPTH-1];
+    // this is the BRAM &     // This is where it holds the data being read out
+(* ram_style = "block" *) reg [WIDTH-1:0] mem [0:DEPTH-1];
     // This is where it holds the data being read out
     reg [WIDTH-1:0] data_out_reg;
     // Tracks where to write next in the memory table
