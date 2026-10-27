@@ -1,0 +1,15 @@
+Case1:PASSED.
+Test Case2: Write all Ones: PASSED.
+Test Case 2: Read all Ones: PASSED.
+Test Case 2:Write all Zeros: PASSED
+Test Case 2:Read all Zeros: PASSED
+Test Case 3:Alternating for 0xAAAA has: PASSED
+Test Case 3:Alternating for 0x5555 has: PASSED
+Test Case 4:Writing to every memory location: PASSED
+Test Case 4:Reading every location: PASSED
+Test Case 5:Empty Flag: PASSED
+Test Case 5:Almost full: PASSED
+Test Case 5:Full: PASSED
+Test Case 5:Almost empty: PASSED
+Test Case 6:Write Enable Stayed: PASSED
+Test Case 6:Read Enable Stayed: PASSED
